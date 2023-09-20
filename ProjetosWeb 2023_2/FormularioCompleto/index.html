@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Formulário Fatec </title>
+</head>
+<body>
+    <h2> Roupas XIQUE XIQUE </h2>
+    <h3> Cadastro </h3>
+   <form>
+        <fieldset>
+            <legend> Dados Pessoais </legend>
+            <label for="nome"> Nome </label>
+            <input type="text" 
+                    id="nome" 
+                    name="nomeCliente"
+                    maxlength="30"
+                    minlength="10"
+                    size="40"
+                    required>
+            
+            <label for="senha"> Senha </label>
+            <input type="password" 
+                    id="senha" 
+                    name="password"
+                    maxlength="12"
+                    minlength="4"
+                    placeholder="Senha com letras e números"
+                    size="22">
+            
+            <p><label for="ec"> Estado Civil: </label></p>
+            <input type="radio" name="ec" id="radio" value="solteiro" >
+            <label for="radio"> Solteiro </label>
+            <input type="radio" name="ec" id="radio" value="casado">
+            <label for="radio"> Casado </label>
+            <input type="radio" name="ec" id="radio" value="uniaoestavel">
+            <label for="radio"> União estável </label>
+        
+            <p><label for="cor"> Cor Preferida: </label></p>
+            <input type="color" name="" id="">
+
+            <p><label for=""> Grau de Satisfação: </label></p>  
+            <input type="range" name="" id="" min="1" max="10" step="2">        
+            <!--Step serve para definir a quantidade de "saltos"-->
+
+        </fieldset>
+        <fieldset>
+            <legend> Dados de Cobrança </legend>
+            <label for="cidade"> Cidade </label>
+            <input type="text"
+                    name="cidade"
+                    id="cidade"
+                    value="Votorantim"
+                    disabled>
+                    <!--disable serve para não deixar que o objeto seja selecionado, e muda sua cor-->
+
+            <label for="uf"> UF </label>
+            <select name="uf" id="uf">
+                <optgroup label = "Região Norte">
+                    <option value="Amazonas">AM</option>
+                    <option value="Acre">AC</option>
+                    <!--Value é o valor que sera enviado ao banco quando clicado na variável-->
+                </optgroup>
+                <optgroup label="Sudeste">
+                    <option value="SaoPaulo">SP</option>
+                    <option value="RiodeJaneiro">RJ</option>
+                </optgroup>
+                  <!--para criar uma lista de opções usar o select e options-->
+            </select>
+                <!--Expressão regular "regex" define uma forma para um objeto-->
+            <label for="cep"> CEP </label>
+            <input type="text" name="cep" id="cep" size="10" >
+            
+            <input type="checkbox" name="Express" id="envio" checked>
+            <label for="envio"> Express </label>                    
+
+        </fieldset>
+
+        <button> Cadastrar </button>
+        <input type="submit" value="Cadastrar">
+
+   </form> 
+
+
+</body>
+</html>
